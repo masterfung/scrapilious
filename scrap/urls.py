@@ -6,5 +6,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'scrap.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^apartmentmappers/', include(admin.site.urls)),
+    url(r'^', 'apartment.views.home', name='home'),
+
 )
