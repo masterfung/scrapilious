@@ -1,7 +1,7 @@
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 from scrapy.contrib.spiders import Rule, CrawlSpider
 from scrapy.selector import HtmlXPathSelector
-
+from ..items import CraigslistItem
 
 
 class MySpider(CrawlSpider):
@@ -18,14 +18,14 @@ class MySpider(CrawlSpider):
         items = []
         hxs = HtmlXPathSelector(response)
         print response.url
-        # titles = hxs.select("//div")
-        # for title in titles:
-        #     item = CraigslistSampleItem()
-        #     item ["title"] = title.select("//li/a/text()").extract()
-        #     item ["link"] = title.select("//li/a/@href").extract()
-        #     print ('**parse-items_1:', item["title"])
-        #     items.append(item)
-        # return items
+        titles = hxs.select("//div")
+        for title in titles:
+            item = CraigslistItem()
+            item ["title"] = title.select("//li/a/text()").extract()
+            item ["link"] = title.select("//li/a/@href").extract()
+            print ('**parse-items_1:', item["title"])
+            items.append(item)
+        return items
 
     # def parse_items_2(self, response):
     #     hxs = HtmlXPathSelector(response)

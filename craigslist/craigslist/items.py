@@ -6,7 +6,7 @@
 # http://doc.scrapy.org/en/latest/topics/items.html
 
 import scrapy
-from scrap.apartment.models import Apartment
+from .models import Apartment
 
 
 class CraigslistItem(scrapy.Item):
