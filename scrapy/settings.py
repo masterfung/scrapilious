@@ -40,6 +40,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apartment',
+    'rest_framework',
+    'rest_framework_httpsignature',
+
 
 )
 
@@ -100,7 +103,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATIC_URL = '/static/'
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 try:
     from local_settings import *

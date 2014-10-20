@@ -14,4 +14,6 @@ urlpatterns = patterns('',
     url(r'^graphs/$', 'apartment.views.graphs', name='graphs'),
 
     url(r'^login/$', 'apartment.views.login', name='login'),
+
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 )

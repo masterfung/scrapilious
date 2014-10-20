@@ -6,4 +6,4 @@ from .models import Apartment
 
 @admin.register(Apartment)
 class ApartmentAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['title', 'price', 'description', 'location']
