@@ -2,7 +2,7 @@ Django==1.7
 Markdown==2.5.1
 Twisted==14.0.2
 cffi==0.8.6
-cryptography==0.6
+cryptography==50.0.0
 cssselect==0.9.1
 django-filter==0.8
 djangorestframework==2.4.3
