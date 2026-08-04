@@ -1,5 +1,5 @@
 Django==1.7
-Markdown==2.5.1
+Markdown==3.8.1
 Twisted==14.0.2
 cffi==0.8.6
 cryptography==0.6
