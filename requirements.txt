@@ -1,4 +1,4 @@
-Django==1.7
+Django==5.2.17
 Markdown==2.5.1
 Twisted==14.0.2
 cffi==0.8.6
